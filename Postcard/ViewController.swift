@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var enternametextfield: UITextField!
     @IBOutlet weak var entermessagetextfield: UITextField!
     @IBOutlet weak var mailButton: UIButton!
+    @IBOutlet weak var l_name_label: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +29,22 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendMailButtonPressed(sender: UIButton) {
-        messagelabel.hidden = false
-        messagelabel.text = entermessagetextfield.text
-        messagelabel.textColor = UIColor.redColor()
-       // Teste 
-        entermessagetextfield.text = ""
-        entermessagetextfield.resignFirstResponder()
         
-        mailButton.setTitle("Mail sent", forState: UIControlState.Normal)
+        
+        messagelabel.hidden = false //erstmal: zeigen
+        messagelabel.text = entermessagetextfield.text //Text nach oben
+        entermessagetextfield.text = "" //Text unten löschen
+        messagelabel.textColor = UIColor.redColor() //farbe oben auf rot
+        
+        l_name_label.hidden = false // zeigen
+        l_name_label.text = enternametextfield.text // Text nach oben
+        l_name_label.textColor = UIColor.blueColor() // Text blau
+        enternametextfield.text = "" //unten löschen
+        
+        entermessagetextfield.resignFirstResponder() //macht am Ebde die Tastatur weg
+        enternametextfield.resignFirstResponder() // auch hier die Tastatur weg, falls der Mauszeiger da ist
+        
+        mailButton.setTitle("Mail sent", forState: UIControlState.Normal) //Button selbst verändern
     }
 
 }

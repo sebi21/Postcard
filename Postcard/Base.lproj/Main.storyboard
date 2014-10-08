@@ -106,6 +106,15 @@
                                     <action selector="sendMailButtonPressed:" destination="euX-Py-dp4" eventType="touchUpInside" id="kfA-tu-ETD"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdo-cg-sEa">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="55" y="148" width="127" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -115,6 +124,7 @@
                                 <exclude reference="yKt-nj-U4b"/>
                                 <exclude reference="iUm-Wv-9pb"/>
                                 <exclude reference="9nH-f0-ugl"/>
+                                <exclude reference="Vdo-cg-sEa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -124,6 +134,7 @@
                                 <include reference="yKt-nj-U4b"/>
                                 <include reference="iUm-Wv-9pb"/>
                                 <include reference="9nH-f0-ugl"/>
+                                <include reference="Vdo-cg-sEa"/>
                             </mask>
                         </variation>
                     </view>
@@ -133,6 +144,7 @@
                     <connections>
                         <outlet property="entermessagetextfield" destination="iUm-Wv-9pb" id="5Eu-Xt-Nok"/>
                         <outlet property="enternametextfield" destination="yKt-nj-U4b" id="Dg9-nj-G9S"/>
+                        <outlet property="l_name_label" destination="Vdo-cg-sEa" id="IoV-ob-SZT"/>
                         <outlet property="mailButton" destination="9nH-f0-ugl" id="r4Y-Bz-1pb"/>
                         <outlet property="messagelabel" destination="mh2-0o-45a" id="41C-3P-JAO"/>
                     </connections>
